@@ -1,0 +1,39 @@
+Subnetting size
+Hosts Required   |   MASK   |   CIDR
+4094   |   255.255.240.0   |   /20 
+2046   |   255.255.248.0   |   /21  
+1022   |   255.255.252.0   |   /22  
+510    |   255.255.254.0   |   /23  
+254    |   255.255.255.0   |   /24  
+126    |   255.255.255.128 |   /25 
+62     |   255.255.255.192 |   /26 
+30     |   255.255.255.224 |   /27 
+14     |   255.255.255.240 |   /28 
+6      |   255.255.255.248 |   /29 
+
+This is only for available hosts, as the first and last ip of each section are used for the network address and the broadcast address.
+
+
+VLAN
+- needs packet switch
+- often used for IP subnets
+
+Setup
+To set up devices to work on a specific vlan you need to set their IP address to one within the subnet you want them to be in. 
+You can allow them to comunicate with other ips from that subnet by using a edge switch configured wit hthe VLAN data for each subnet. You will also need to set certain ports onn the switch to certain VLANs, and make sure the devices are connected using those ports.
+After this you would need to connect them to a core switch to allow connection to the same or different VLANs on different switches. The core switches are also where you set the router IPs for each subnet
+
+VLAN database
+Commands to edit vlan database quickly
+interface range FastEthernet 0/x-y | selects multiple ethernet ports to be edited
+switchport access vlan x  |  switches the vlan on the port
+
+Setting routing
+(config)ip routing (turns on routing on multilayer switches)
+(config)interface vlan 100 (brings you into vlan interface config mode)
+(config-if)ip address 10.25.100.1 255.255.255.0 (set the ip address of 10.25.100.1 for vlan 100 on a routing switch)
+
+Trunking
+When connecting edge switches to the core switches, you will want trunking enabled
+Set the ports you with to connect the switches with as trunking ports, as well as the ports on the edge switches that will connect to them
+If you are using multiple core switches, you can also connect them with trunking ports to allow connections accross them

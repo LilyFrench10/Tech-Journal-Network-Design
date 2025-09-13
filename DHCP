@@ -1,0 +1,21 @@
+Enabling dhcp 
+Go to the Services tab and enable DHCP
+serverPool is the Default Pool and cannot be removed. 
+This menu is where you can create pools for different vlans
+Default gateway is the router address for that VLAN 
+Leave DNS at 0.0.0.0
+TFTP leave at 0.0.0.0
+
+
+
+ip helper-address vlan interface configuration
+OnCore-Switch, go into the interface configuration
+Use ip helper-address IPADDRESS 
+Do this for every vlan
+
+commands for CLI
+Enter config on cpt cli
+Enter Privileged EXEC Mode:
+If you are in user EXEC mode (indicated by >), type enable and press Enter. The prompt will change to privileged EXEC mode (indicated by #).
+Enter Global Configuration Mode:
+From privileged EXEC mode, type configure terminal (or its abbreviation conf t) and press Enter. The prompt

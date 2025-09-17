@@ -1,0 +1,28 @@
+console into switch 
+plug blue wire into console port on switch and usb on comp
+device manager to find COM port
+putty
+serial, disable flow control, set correct COM
+connect using session
+
+
+
+how to hostnane
+conf t
+hostname name
+
+
+vlan command
+from picture
+interface vlan 400
+up address ip# subnetlong
+
+interface port
+switchport mode access
+switchport access vlan 2
+
+trunking command
+interface PORTNANE/0/1
+switchoort trunk encapsulation dot1q
+switchport mode trunk
+switchport trunk allowed vlan 400

@@ -8,6 +8,7 @@ connect using session
 
 
 how to hostnane
+enable
 conf t
 hostname name
 

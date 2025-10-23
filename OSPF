@@ -12,3 +12,13 @@ to remove ospf or route
 no router ospf 1
 no NETADDRESS WILDCARD area 0
 
+
+authentication
+
+plaintext
+
+interface the port
+R1(config-if)#ip ospf authentication-key secret
+R1(config-if)#ip ospf authentication
+
+do this on all ports using ospf

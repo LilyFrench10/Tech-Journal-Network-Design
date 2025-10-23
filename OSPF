@@ -1,0 +1,14 @@
+To create ospf
+- router ospf 1
+to spread a route using it
+network NETADDRESS WILDCARD MASK area 0
+
+
+
+troubleshooting
+the ports on each of 2 connecting routers need to be on the same network, meaning both ip addresses need to be
+
+to remove ospf or route
+no router ospf 1
+no NETADDRESS WILDCARD area 0
+

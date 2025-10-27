@@ -7,6 +7,7 @@ network NETADDRESS WILDCARD MASK area 0
 
 troubleshooting
 the ports on each of 2 connecting routers need to be on the same network, meaning both ip addresses need to be
+make sure all routers have all the proper network addresses, to send to a router be sure to include its address in the list
 
 to remove ospf or route
 no router ospf 1

@@ -1,0 +1,29 @@
+Set default route 
+Ip route 0.0.0.0 0.0.0.0 to IPADDR 
+ send default route to area
+
+
+default-information originate 
+
+
+
+
+Redistribute in BGP config
+redistribute ospf 1
+
+
+
+Define bgp instance
+router bgp NUM
+Set neighbors 
+neighbor PEERIP remote-as PEERNUM
+
+give out networks
+network IP mask SUBNET
+
+Troubleshooting
+Make sure all ports are up
+
+If you need to set a router id for bgp, you can use an ip address since it just needs to be 4 numbers separated by periods (0.0.0.0) and unique among the network.
+
+

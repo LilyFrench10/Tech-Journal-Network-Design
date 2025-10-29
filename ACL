@@ -1,0 +1,24 @@
+Create ACL
+
+standard
+ip access-list standard STND-1
+deny IP WILDCARD
+permit any
+
+extended
+ip access-list extended EXTEND-1
+deny ip IP WILDCARD host DESTINATIONHOSTIP
+permit ip any any
+
+
+Apply ACL to interface
+Within the interface run the following
+ip access-group STND-1 in/out
+
+
+
+Delete ACL
+no ip access-list type name
+
+Show all on router
+show access-lists
